@@ -17,7 +17,9 @@ spec:
         name: argocd-env-secret
     env:
     - name: ARGOCD_SERVER
-      value: argocd.cp4multicloud-ibm.com/argo-cd
+      value: argocd.cp4multicloud-ibm.com
+    - name: grpc-web-root-path
+      value: /argo-cd
 
   steps:
   - name: git-checkout
