@@ -33,7 +33,6 @@ spec:
     - /usr/bin/mvn
     args:
     - test-compile
-    - failsafe:integration-test
     - "-Dapp.test.host=$(inputs.params.gateway)"
     - "-Dapp.test.port=80"
 ---
