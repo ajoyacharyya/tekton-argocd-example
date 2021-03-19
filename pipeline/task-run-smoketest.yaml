@@ -27,7 +27,7 @@ spec:
       git checkout FETCH_HEAD
 
   - name: run-mvn-st
-    image: ajoyacharyya/maven-jdk14:quarkus-deps-1.5.1-b1
+    image: sdaschner/maven-jdk14:quarkus-deps-1.5.1-b5
     workingDir: "$(workspaces.app-source.path)/app"
     command:
     - /usr/bin/mvn
