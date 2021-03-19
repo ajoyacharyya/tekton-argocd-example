@@ -34,7 +34,6 @@ spec:
     args:
     - test-compile
     - failsafe:integration-test
-    - failsafe:verify
     - "-Dapp.test.host=$(inputs.params.gateway)"
     - "-Dapp.test.port=80"
 ---
