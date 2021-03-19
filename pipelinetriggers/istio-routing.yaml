@@ -12,7 +12,7 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "tekton-triggers.example.com"
+    - "devready.cp4multicloud-ibm.com"
 ---
 
 apiVersion: networking.istio.io/v1alpha3
@@ -22,11 +22,14 @@ metadata:
   namespace: tekton-pipelines
 spec:
   hosts:
-  - "tekton-triggers.example.com"
+  - "devready.cp4multicloud-ibm.com"
   gateways:
   - tekton-triggers
   http:
-  - route:
+  - match:
+    - uri:
+        prefix: "/el-github-listener-interceptor"
+    route:
     - destination:
         host: el-github-listener-interceptor
         port:

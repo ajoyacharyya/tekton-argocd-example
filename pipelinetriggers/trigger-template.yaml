@@ -20,11 +20,11 @@ spec:
       - name: buildRevision
         value: $(tt.params.buildRevision)
       - name: appGitUrl
-        value: 'git@github.com:example/app.git'
+        value: 'git@github.com:ajoyacharyya/coffee-testing.git'
       - name: configGitUrl
-        value: 'git@github.com:example/app-config.git'
+        value: 'git@github.com:ajoyacharyya/coffee-testing-config.git'
       - name: appImage
-        value: 'docker.example.com/app'
+        value: 'ajoyacharyya/coffee-shop'
       workspaces:
       - name: app-source
         emptyDir: {}
